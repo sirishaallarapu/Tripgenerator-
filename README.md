@@ -18,15 +18,23 @@ This is the **frontend** of the Story-Based Trip Generator project. It allows us
 ## 🛠️ Project Structure
 
 trip_generator/
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md                 # Optional backend README
+│
 ├── frontend/
-│ ├── index.html
-│ ├── package.json
-│ ├── vite.config.js (if present)
-│ ├── README.md ← (this file)
-│ └── src/
-│ ├── main.jsx
-│ ├── TripForm.jsx
-│ └── App.jsx
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js            # optional (if you customized vite)
+│   ├── README.md                 # the combined README I gave you
+│   └── src/
+│       ├── main.jsx              # React app entry point
+│       ├── App.jsx               # Main App component
+│       └── TripForm.jsx          # Form component for prompt input
+│
+└── README.md                    # Root README if you want (optional)
+
 
 
 ---
@@ -85,6 +93,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 🌐 API Contract
+
 9.The frontend expects a backend API endpoint at:
 
 ```bash
