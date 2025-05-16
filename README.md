@@ -92,7 +92,31 @@ On Windows:
 python -m venv venv
 venv\Scripts\activate
 ```
+Backend Setup (Python FastAPI)
+Note: Your backend code should expose an API endpoint to generate itineraries as per the contract described below.
 
+ API Contract
+9.The frontend expects a backend API endpoint at:
+
+```bash
+POST http://localhost:8000/api/generate-itinerary
+```
+
+5.Navigate to the backend folder:
+
+```bash
+cd backend
+```
+Install backend dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+8.Run the backend server:
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+Take another terminal
 1. **Navigate to the frontend folder:**
 
    ```bash
@@ -114,29 +138,7 @@ http://localhost:5173
 Backend Setup (Python FastAPI)
 Note: Your backend code should expose an API endpoint to generate itineraries as per the contract described below.
 
-5.Navigate to the backend folder:
-
-```bash
-cd backend
-```
-
-7.Install backend dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-8.Run the backend server:
-```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
-🌐 API Contract
-9.The frontend expects a backend API endpoint at:
-
-```bash
-POST http://localhost:8000/api/generate-itinerary
-```
-10.Request JSON Body:
+Reuest JSON Body:
 
 {
   "story": "your travel story or idea here"
